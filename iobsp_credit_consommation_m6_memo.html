@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — Les garanties et les tiers au contrat</title><style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}
+.enc p,.cols p{margin:6px 0}.enc.ok{background:#F1F7F3;border-left-color:var(--ok)}.enc.ok .t{color:var(--ok)}
+.cols{display:grid;gap:14px;margin:16px 0}.cols.c2{grid-template-columns:1fr 1fr}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c5,.cols.c6{grid-template-columns:repeat(3,1fr)}
+.cols>div>.enc{margin:0;height:100%}.cols table{margin:0}
+p.src{font-size:12.5px;color:var(--gris-moyen);line-height:1.5}
+td,th{vertical-align:top}
+@media(max-width:760px){.cols.c2,.cols.c3,.cols.c4,.cols.c5,.cols.c6{grid-template-columns:1fr}}
+table.frise{table-layout:fixed;font-size:13px}.enc h3{margin:2px 0 8px;font-family:Georgia,serif;color:var(--prune-fonce);font-size:16px}
+.cols>div>.enc{margin:0}
+</style></head><body>
+<header class="bandeau"><div class="wrap"><div class="chapitre">IOBSP NIVEAU 2 · BLOC 2 · JOURNÉE 3 — MODULE 6</div><h1>Les garanties et les tiers au contrat</h1><p class="sous">Fiche mémo détaillée — cautionnement, sûretés réelles, assurance emprunteur, conjoint non coemprunteur</p></div></header>
+<main class="wrap"><a class="dl" href="J3_M6_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<p><b>La question qui structure tout le module:</b> qui est engagé, et <b>sur quel patrimoine</b> ? Ne jamais répondre « il est engagé» sans préciser la masse atteinte — c&#x27;est là que se jouent les points en cas pratique.</p>
+<h2>1 · Les deux familles de garanties</h2>
+<table><thead><tr><th><b>Famille</b></th><th><b>Mécanisme</b></th><th><b>En crédit à la consommation</b></th></tr></thead><tbody><tr><td><b>Sûretés personnelles</b></td><td>Une autre personne s&#x27;engage à payer si l&#x27;emprunteur ne paie pas</td><td><b>Cautionnement</b> — de loin la plus fréquente</td></tr><tr><td><b>Sûretés réelles</b></td><td>Un bien est affecté: le créancier se paiera dessus</td><td><b>Gage</b> (bien meuble corporel: le véhicule financé) · <b>nantissement</b> (bien meuble incorporel: assurance vie, compte- titres, parts sociales)</td></tr></tbody></table>
+<div class="enc ci"><span class="t">À NE PAS CITER EN CRÉDIT CONSO</span><p>L&#x27; <b>hypothèque</b> porte sur un immeuble et relève du <b>crédit immobilier</b>. La mentionner comme garantie du crédit à la consommation est une erreur classique.</p></div>
+<h2>2 · Le cautionnement — le socle</h2>
+<p>Contrat par lequel une <b>caution</b> s&#x27;oblige envers le créancier à payer la dette du débiteur <b>en cas de défaillance</b> de celui-ci (art. 2288). C&#x27;est une garantie <b>accessoire</b>: elle ne peut excéder la dette principale et s&#x27;éteint avec elle.</p>
+<p><i>Régime refondu par l&#x27;ordonnance n° 2021-1192 du 15 septembre 2021, en vigueur au 1 er janvier 2022.</i></p>
+<table><thead><tr><th><b>Art.</b></th><th><b>Règle</b></th><th><b>Contenu et sanction</b></th></tr></thead><tbody><tr><td><b>2297</b></td><td><b>Mention apposée par la caution</b></td><td>La caution <b>personne physique appose elle-même</b> la mention par laquelle elle s&#x27;engage à payer ce que doit le débiteur en cas de défaillance, dans la limite d&#x27;un montant en principal et accessoires <b>exprimé en</b> <b>toutes lettres et en chiffres</b>. <b>À peine de nullité.</b> En cas de différence, <b>les lettres l&#x27;emportent</b>. Le texte ne dit plus « manuscrite»: ce qui compte est que la caution l&#x27;écrive elle-même</td></tr><tr><td><b>2299</b></td><td><b>Devoir de mise en garde</b></td><td>Dû par le <b>créancier professionnel</b> à la caution personne physique lorsque l&#x27;engagement <b>du DÉBITEUR</b> est inadapté à <b>ses</b> capacités financières. Sanction: <b>déchéance</b> du droit du créancier contre la caution <b>à hauteur du préjudice subi par celle-ci</b></td></tr><tr><td><b>2300</b></td><td><b>Proportionnalité</b></td><td>Cautionnement souscrit par une personne physique envers un créancier professionnel, <b>manifestement</b> <b>disproportionné</b> aux revenus et au patrimoine <b>de la caution</b> lors de sa conclusion → il est <b>RÉDUIT</b> au montant à hauteur duquel elle pouvait s&#x27;engager à cette date</td></tr><tr><td><b>2302</b></td><td><b>Information</b></td><td>Information annuelle de la caution personne physique sur le montant restant dû · information de la défaillance du débiteur</td></tr></tbody></table>
+<div class="enc al"><span class="t">LES DEUX CONFUSIONS QUI COÛTENT LA QUESTION</span><p><b>2299 ≠ 2300.</b> La <b>mise en garde</b> regarde les capacités du <b>DÉBITEUR</b>; la <b>proportionnalité</b> regarde le patrimoine de la <b>CAUTION</b>. Ce sont deux contrôles distincts, avec deux sanctions distinctes.<br><b>Réduction, et non décharge.</b> Avant la réforme, un cautionnement disproportionné ne pouvait pas être invoqué du tout. Depuis le 1 er janvier 2022, il est <b>ramené</b> à la mesure de ce que la caution pouvait supporter. Une réponse tirée d&#x27;un manuel antérieur sera fausse.</p></div>
+<h2>3 · Caution simple ou caution solidaire</h2>
+<div class="cols c2"><div><div class="enc"><h3>Caution simple</h3><p>• <b>Bénéfice de discussion</b>: elle peut exiger que le créancier poursuive d&#x27;abord le débiteur et fasse vendre ses biens<br>• <b>Bénéfice de division</b>: s&#x27;il y a plusieurs cautions, elle peut exiger que le créancier divise ses poursuites</p></div></div><div><div class="enc"><h3>Caution solidaire</h3><p>• <b>Privée des deux bénéfices</b><br>• Le créancier la poursuit <b>directement</b>, sans rien avoir tenté contre le débiteur, et <b>pour le tout</b><br>• C&#x27;est la forme quasi systématique en pratique bancaire</p></div></div></div>
+<div class="enc"><span class="t">LA SANCTION DE FORME À CONNAÎTRE</span><p>Si la caution est privée de ces bénéfices, elle doit le <b>reconnaître dans la mention</b> qu&#x27;elle appose. <b>À défaut, elle conserve le droit de s&#x27;en prévaloir</b>: le cautionnement reste valable mais <b>redevient simple</b>. Le créancier perd la solidarité pour un défaut de rédaction. <i>art. 2297 C. civ.</i></p></div>
+<h2>4 · L&#x27;assurance emprunteur</h2>
+<table><thead><tr><th><b>Point</b></th><th><b>Règle</b></th></tr></thead><tbody><tr><td><b>Nature</b></td><td>Ce n&#x27;est <b>pas</b> une sûreté au sens du droit des sûretés, mais un contrat d&#x27;assurance — décès, invalidité, parfois perte d&#x27;emploi. Rôle économique équivalent pour le prêteur</td></tr><tr><td><b>Caractère obligatoire</b></td><td><b>Aucune disposition légale n&#x27;impose de s&#x27;assurer.</b> En crédit à la consommation, l&#x27;assurance est en principe <b>facultative</b> — ce qui ne l&#x27;empêche pas d&#x27;être systématiquement proposée</td></tr><tr><td><b>Libre choix</b></td><td>Depuis la <b>loi Lagarde</b> (module 3): l&#x27;emprunteur choisit son assurance, sous réserve d&#x27;un <b>niveau de garantie</b> <b>équivalent</b>. Le prêteur ne peut ni la refuser, ni modifier les conditions du crédit en représailles</td></tr><tr><td><b>Effet sur le TAEG</b></td><td><b>Exigée</b> → son coût <b>entre</b> dans le TAEG. <b>Réellement facultative</b> → il n&#x27;y entre pas. Le mot employé dans l&#x27;offre ne fait pas la règle (module 5)</td></tr></tbody></table>
+<div class="enc ci"><span class="t">NE PAS TRANSPOSER AU CRÉDIT CONSO</span><p>Les dispositifs de résiliation successifs — <b>Hamon</b>, <b>Bourquin</b>, puis la <b>loi Lemoine</b> avec la résiliation à tout moment et la suppression du questionnaire de santé sous conditions — visent le <b>crédit immobilier</b>. Ne pas les appliquer au crédit à la consommation devant un client.</p></div>
+<h2>5 · Le conjoint non coemprunteur — le cœur du module</h2>
+<div class="enc"><p><b>Article 220 C. civ.</b> <i>— Chacun des époux a pouvoir pour passer seul les contrats qui ont pour objet l&#x27;entretien du ménage ou l&#x27;éducation des enfants: toute dette</i> <i>ainsi contractée par l&#x27;un oblige l&#x27;autre solidairement.</i> <b>La solidarité n&#x27;a pas lieu</b> <i>pour des dépenses manifestement excessives (…) ni pour les achats à tempérament</i> <b>ni pour les emprunts</b> <i>, à moins que ceux-ci ne portent sur des</i> <b>sommes modestes nécessaires aux besoins de la vie courante</b> <i>et que le montant cumulé de ces</i> <i>sommes, en cas de pluralité d&#x27;emprunts, ne soit pas manifestement excessif eu égard au train de vie du ménage.</i></p></div>
+<div class="enc"><p><b>Article 1415 C. civ.</b> <i>— Chacun des époux ne peut engager que</i> <b>ses biens propres et ses revenus</b> <i>, par un cautionnement ou un emprunt, à moins que ceux-ci n&#x27;aient</i> <i>été contractés avec le</i> <b>consentement exprès de l&#x27;autre conjoint</b> <i>, lequel, dans ce cas,</i> <b>n&#x27;engage pas ses biens propres</b> <i>.</i></p></div>
+<table><thead><tr><th><b>Situation</b></th><th><b>Biens engagés</b></th><th><b>Biens hors d&#x27;atteinte</b></th></tr></thead><tbody><tr><td><b>Emprunt ou cautionnement seul, sans</b> <b>consentement du conjoint</b> <b>(communauté)</b></td><td>Biens <b>propres</b> et <b>revenus</b> de celui qui s&#x27;engage</td><td><b>Biens communs</b> · biens propres du conjoint</td></tr><tr><td><b>Emprunt ou cautionnement avec</b> <b>consentement exprès</b></td><td>Biens propres et revenus de l&#x27;emprunteur <b>+ biens</b> <b>communs</b></td><td><b>Biens propres du conjoint</b> — il a consenti, il n&#x27;est pas devenu codébiteur</td></tr><tr><td><b>Dette ménagère ordinaire (art. 220)</b></td><td><b>Solidarité</b>: le conjoint est tenu sans avoir signé</td><td>— sauf dépense manifestement excessive</td></tr><tr><td><b>Emprunt modeste et nécessaire à la vie</b> <b>courante (exception de l&#x27;art. 220)</b></td><td><b>Solidarité</b> malgré l&#x27;exclusion de principe</td><td>— sauf cumul manifestement excessif</td></tr></tbody></table>
+<div class="enc al"><p><b>LES TROIS PIÈGES DE L&#x27;ARTICLE 1415</b></p><p>• Il ne concerne que les <b>régimes de communauté</b>. Sous séparation de biens, il n&#x27;y a pas de masse commune.<br>• Le consentement doit être <b>exprès</b> et viser <b>cet engagement-là</b>. Présence à la signature, connaissance de l&#x27;opération, accord verbal: <b>insuffisants</b>. • Le conjoint qui consent <b>n&#x27;engage pas ses biens propres</b>. Il n&#x27;est pas codébiteur. C&#x27;est la fin de l&#x27;article, et celle que l&#x27;on oublie.</p></div>
+<h2>6 · La méthode, en trois questions</h2>
+<table><thead><tr><th></th><th><b>Question à se poser</b></th><th><b>Conséquence</b></th></tr></thead><tbody><tr><td><b>1</b></td><td>De quelle dette s&#x27;agit-il ?</td><td>Emprunt ou cautionnement → <b>art. 1415</b> si communauté. Dette ménagère ordinaire → <b>art. 220</b></td></tr><tr><td><b>2</b></td><td>S&#x27;il s&#x27;agit d&#x27;un emprunt: est-il <b>modeste</b> ET <b>nécessaire à la vie</b> <b>courante</b> ET <b>non cumulé de façon excessive</b> ?</td><td>Les trois conditions sont <b>cumulatives</b>. Si oui, la solidarité de l&#x27;art. 220 joue malgré l&#x27;exclusion de principe</td></tr><tr><td><b>3</b></td><td>Le conjoint a-t-il donné un <b>consentement exprès</b> ?</td><td>Détermine si les <b>biens communs</b> entrent dans le gage du créancier</td></tr></tbody></table>
+<div class="enc ok"><p><b>CE QUI TOMBE À L&#x27;EXAMEN</b></p><p>• Absence de la mention de l&#x27;art. 2297 → <b>nullité</b>; divergence chiffres/lettres → <b>les lettres</b>.<br>• Art. 2299: mise en garde sur les capacités <b>du débiteur</b>; sanction = déchéance à hauteur du préjudice.<br>• Art. 2300: disproportion appréciée sur la <b>caution</b>; sanction = <b>réduction</b>, non décharge.<br>• Caution solidaire = privée des bénéfices de <b>discussion</b> et de <b>division</b>; mention silencieuse → elle les conserve.<br>• Art. 220: les emprunts sont <b>exclus</b> de la solidarité, sauf sommes modestes nécessaires à la vie courante, cumul compris.<br>• Art. 1415: biens propres + revenus; consentement exprès → + biens communs; jamais les biens propres du conjoint.<br>• Gage et nantissement en conso; <b>hypothèque</b> = crédit immobilier.<br>• Assurance: facultative en droit, libre choix depuis Lagarde; exigée → entre dans le TAEG.</p></div>
+<p><i>Sources: code civil, art. 220, 1415, 2288, 2295 à 2297, 2299, 2300 et 2302 · ordonnance n° 2021-1192 du 15 septembre 2021 portant réforme du droit des sûretés, en vigueur au</i> <i>1 er janvier 2022 · loi n° 2010-737 du 1 er juillet 2010 (Lagarde) · code de la consommation pour les obligations d&#x27;information propres au crédit à la consommation · arrêté du 18</i> <i>juillet 2022, annexe A, point B.1.</i></p>
+</main>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</body></html>
